@@ -1,6 +1,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --color-100: #10002b;
+  --color-200: #240046;
+  --color-300: #3c096c;
+  --color-400: #5a189a;
+  --color-500: #7b2cbf;
+  --color-600: #9d4edd;
+  --color-700: #c77dff;
+  --color-800: #e0aaff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +48,46 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+footer {
+  display: grid;
+  background-color: var(--color-300);
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--color-300);
+  border-bottom: 1px solid var(--color-700);
+}
+
+.links {
+  display: grid;
+  justify-content: start;
+  column-gap: 20px;
+  grid-auto-flow: column;
+  grid-row: 1;
+}
+
+.loginButton {
+  grid-row: 1;
+  justify-self: end;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: 100px 1fr 50px;
+  min-height: 100svh;
+  max-width: 90%;
+  margin: auto;
+}
+
+.content {
+  padding: 20px;
+  background-color: var(--color-200);
 }
